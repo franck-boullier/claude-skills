@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added — Security Skills Suite & Self-Eval
 
 **6 New Security Skills (engineering-team):**
+
 - **adversarial-reviewer** — Adversarial code review with 3 hostile personas (Saboteur, New Hire, Security Auditor) to break self-review monoculture
 - **ai-security** — ATLAS-mapped prompt injection detection, model inversion & data poisoning risk scoring (`ai_threat_scanner.py`)
 - **cloud-security** — IAM privilege escalation paths, S3 public access checks, security group detection across AWS/Azure/GCP (`cloud_posture_check.py`)
@@ -18,12 +19,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **threat-detection** — Hypothesis-driven threat hunting, IOC sweep generation, z-score anomaly detection (`threat_signal_analyzer.py`)
 
 **1 New Engineering Skill (engineering/):**
+
 - **self-eval** — Honest AI work quality evaluation with two-axis scoring (substance + execution), score inflation detection, devil's advocate reasoning, and session persistence
 
 **1 New Engineering Skill (engineering-team/):**
+
 - **snowflake-development** — Snowflake data warehouse development, SQL optimization, and data pipeline patterns
 
 ### Changed
+
 - **Total skills:** 205 → 223 across 9 domains
 - **Python tools:** 268 → 298 CLI scripts (all stdlib-only, verified)
 - **Reference guides:** 384 → 416
@@ -37,12 +41,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Codex CLI and Gemini CLI indexes re-synced
 
 ### Documentation
+
 - Root CLAUDE.md, README.md, docs/index.md, docs/getting-started.md updated with new counts
 - engineering-team/CLAUDE.md updated with security skills section
 - mkdocs.yml site_description updated
 - New skill docs pages auto-generated for all 8 new skills
 
 ### Backward Compatibility
+
 - All existing SKILL.md files, scripts, and references unchanged
 - No skill removals or renames
 - Plugin source paths unchanged — existing installations will not break
@@ -55,6 +61,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed — Product Team Quality & Cross-Domain Integration
 
 **Landing Page Generator — TSX + Brand Voice Integration:**
+
 - Landing page scaffolder now defaults to **Next.js/React TSX output** with Tailwind CSS (HTML preserved via `--format html`)
 - 4 Tailwind design styles: `dark-saas`, `clean-minimal`, `bold-startup`, `enterprise` with complete class mappings
 - 7 section generators: nav, hero, features, testimonials, pricing, CTA, footer
@@ -62,20 +69,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added Related Skills cross-references to SKILL.md
 
 **Documentation Updates:**
+
 - `product-team/CLAUDE.md` — Added Workflow 4 (Brand-Aligned Landing Page), updated scaffolder section with TSX docs, added Cross-Domain Integration section
 - `product-team/README.md` — Fixed ghost script references (removed 7 scripts that never existed), corrected skill/tool/agent/command counts
 - `product-team/.codex/instructions.md` — Added brand voice cross-domain workflow and TSX default note
 
 ### Fixed
+
 - **competitive-teardown/SKILL.md** — Fixed 6 broken file references (`DATA_COLLECTION.md` → `references/data-collection-guide.md`, `TEMPLATES.md` → `references/analysis-templates.md`)
 - **saas-scaffolder/scripts/project_bootstrapper.py** — Fixed f-string backslash syntax incompatible with Python <3.12
 - **237 Python scripts verified** — All pass `--help` without errors (previous session fixed 25 scripts across all domains)
 
 ### Added
+
 - `landing-page-generator/SKILL.md` — Brand voice analysis as prerequisite step in generation workflow
 - Codex and Gemini skill indexes re-synced with updated SKILL.md content
 
 ### Backward Compatibility
+
 - `--format html` still works for landing page scaffolder (TSX is new default)
 - All existing script CLIs and arguments unchanged
 - No skill removals or renames
@@ -86,6 +97,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.1.1] - 2026-03-07
 
 ### Changed — Tessl Quality Optimization (#287)
+
 18 skills optimized from 66-83% to 85-100% via `tessl skill review --optimize`:
 
 | Skill | Before | After |
@@ -111,13 +123,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 | `marketing-skill/marketing-demand-acquisition` | 72% | 99% |
 
 ### Fixed
+
 - Created missing `finance/financial-analyst/references/industry-adaptations.md` (reference was declared but file didn't exist)
 - Removed dead `project-management/packaged-skills/` folder (zip files redundant)
 
 ### Added
+
 - `SKILL_PIPELINE.md` — Mandatory 9-phase production pipeline for all skill work
 
 ### Verified
+
 - Claude Code compliance: 18/18 pass (after fix)
 - All YAML frontmatter valid
 - All file references resolve
@@ -126,6 +141,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+
 - **skill-security-auditor** (POWERFUL tier) — Security audit and vulnerability scanner for AI agent skills. Scans for malicious code, prompt injection, data exfiltration, supply chain risks, and privilege escalation. Zero dependencies, PASS/WARN/FAIL verdicts.
 - `engineering/git-worktree-manager` enhancements:
   - Added `scripts/worktree_manager.py` (worktree creation, port allocation, env sync, optional dependency install)
@@ -149,6 +165,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Extracted prompt libraries/guides into references and added skill README
 
 ### Changed
+
 - Refactored the five enhanced skills to slim, workflow-first `SKILL.md` documents aligned to Anthropic best practices.
 - Updated `engineering/.claude-plugin/plugin.json` metadata:
   - Description now reflects 25 advanced engineering skills
@@ -156,6 +173,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated root `README.md` with a dedicated \"Recently Enhanced Skills\" section.
 
 ### Planned
+
 - Complete Anthropic best practices refactoring (5/42 skills remaining)
 - Production Python tools for remaining RA/QM skills
 - Marketing expansion: SEO Optimizer, Social Media Manager skills
@@ -208,6 +226,7 @@ A new tier of advanced, deeply-engineered skills with comprehensive tooling:
 ### 🔄 Anthropic Best Practices Refactoring (37/42 Skills)
 
 Major rewrite of existing skills following Anthropic's agent skills specification. Each refactored skill received:
+
 - Professional metadata (license, version, category, domain, keywords)
 - Trigger phrases for better Claude activation
 - Table of contents with proper section navigation
@@ -216,43 +235,52 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 - Concise SKILL.md (<200 lines target) with layered reference files
 
 **Engineering skills refactored (14):**
+
 - `senior-architect`, `senior-frontend`, `senior-backend`, `senior-fullstack`
 - `senior-qa`, `senior-secops`, `senior-security`, `code-reviewer`
 - `senior-data-engineer`, `senior-computer-vision`, `senior-ml-engineer`
 - `senior-prompt-engineer`, `tdd-guide`, `tech-stack-evaluator`
 
 **Product & PM skills refactored (5):**
+
 - `product-manager-toolkit`, `product-strategist`, `agile-product-owner`
 - `ux-researcher-designer`, `ui-design-system`
 
 **RA/QM skills refactored (12):**
+
 - `regulatory-affairs-head`, `quality-manager-qmr`, `quality-manager-qms-iso13485`
 - `capa-officer`, `quality-documentation-manager`, `risk-management-specialist`
 - `information-security-manager-iso27001`, `mdr-745-specialist`, `fda-consultant-specialist`
 - `qms-audit-expert`, `isms-audit-expert`, `gdpr-dsgvo-expert`
 
 **Marketing skills refactored (4):**
+
 - `marketing-demand-acquisition`, `marketing-strategy-pmm`
 - `content-creator`, `app-store-optimization`
 
 **Other refactored (2):**
+
 - `aws-solution-architect`, `ms365-tenant-manager`
 
 ### 🔧 Elevated Skills
+
 - `scrum-master` and `senior-pm` elevated to POWERFUL tier — PR #190
 
 ### 🤖 Platform Support
+
 - **OpenAI Codex support** — Full compatibility without restructuring — PR #43, #45, #47
 - **Claude Code native marketplace** — `marketplace.json` and plugin support — PR #182, #185
 - **Codex skills sync** — Automated symlink workflow for Codex integration
 
 ### 📊 Stats
+
 - **86 total skills** across 9 domains (up from 42 across 6)
 - **92+ Python automation tools** (up from 20+)
 - **26 POWERFUL-tier skills** in `engineering/` domain (including skill-security-auditor)
 - **37/42 original skills refactored** to Anthropic best practices
 
 ### Fixed
+
 - CI workflows (`smart-sync.yml`, `pr-issue-auto-close.yml`) — PR #193
 - Installation documentation (Issue #189) — PR #193
 - Plugin JSON with correct counts and missing domains — PR #186
@@ -270,18 +298,21 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 **Enhanced with Anthropic Agent Skills Specification:**
 
 **Marketing Skills (3 skills):**
+
 - Added professional metadata (license, version, category, domain)
 - Added keywords sections for better discovery
 - Enhanced descriptions with explicit triggers
 - Added python-tools and tech-stack documentation
 
 **C-Level Skills (2 skills):**
+
 - Added professional metadata with frameworks
 - Added keywords sections (20+ keywords per skill)
 - Enhanced descriptions for better Claude activation
 - Added technical and strategic terminology
 
 ### Added
+
 - `documentation/implementation/SKILLS_REFACTORING_PLAN.md` — Complete 4-phase refactoring roadmap
 - `documentation/PYTHON_TOOLS_AUDIT.md` — Comprehensive tools quality assessment
 
@@ -292,6 +323,7 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 ## [1.0.2] - 2025-10-21
 
 ### Added
+
 - `LICENSE` file — Official MIT License
 - `CONTRIBUTING.md` — Contribution guidelines and standards
 - `CODE_OF_CONDUCT.md` — Community standards (Contributor Covenant 2.0)
@@ -299,6 +331,7 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 - `CHANGELOG.md` — Version history tracking
 
 ### Documentation
+
 - Complete GitHub repository setup for open source
 - Professional community health files
 - Clear contribution process
@@ -309,10 +342,12 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 ## [1.0.1] - 2025-10-21
 
 ### Added
+
 - GitHub Star History chart to README.md
 - Professional repository presentation
 
 ### Changed
+
 - README.md table of contents anchor links fixed
 - Project management folder reorganized (packaged-skills/ structure)
 
@@ -325,15 +360,18 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 **42 Production-Ready Skills across 6 Domains:**
 
 #### Marketing Skills (3)
+
 - `content-creator` — Brand voice analyzer, SEO optimizer, content frameworks
 - `marketing-demand-acquisition` — Demand gen, paid media, CAC calculator
 - `marketing-strategy-pmm` — Positioning, GTM, competitive intelligence
 
 #### C-Level Advisory (2)
+
 - `ceo-advisor` — Strategy analyzer, financial scenario modeling, board governance
 - `cto-advisor` — Tech debt analyzer, team scaling calculator, engineering metrics
 
 #### Product Team (5)
+
 - `product-manager-toolkit` — RICE prioritizer, interview analyzer, PRD templates
 - `agile-product-owner` — User story generator, sprint planning
 - `product-strategist` — OKR cascade generator, strategic planning
@@ -341,6 +379,7 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 - `ui-design-system` — Design token generator, component architecture
 
 #### Project Management (6)
+
 - `senior-pm` — Portfolio management, stakeholder alignment
 - `scrum-master` — Sprint ceremonies, agile coaching
 - `jira-expert` — JQL mastery, configuration, dashboards
@@ -349,6 +388,7 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 - `atlassian-templates` — Template design, 15+ ready templates
 
 #### Engineering — Core (9)
+
 - `senior-architect` — Architecture diagrams, dependency analysis, ADRs
 - `senior-frontend` — React components, bundle optimization
 - `senior-backend` — API scaffolder, database migrations, load testing
@@ -360,6 +400,7 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 - `senior-security` — Threat modeling, security audits, pentesting
 
 #### Engineering — AI/ML/Data (5)
+
 - `senior-data-scientist` — Experiment designer, feature engineering, statistical analysis
 - `senior-data-engineer` — Pipeline orchestrator, data quality validator, ETL
 - `senior-ml-engineer` — Model deployment, MLOps setup, RAG system builder
@@ -367,6 +408,7 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 - `senior-computer-vision` — Vision model trainer, inference optimizer, video processor
 
 #### Regulatory Affairs & Quality Management (12)
+
 - `regulatory-affairs-head` — Regulatory pathway analyzer, submission tracking
 - `quality-manager-qmr` — QMS effectiveness monitor, compliance dashboards
 - `quality-manager-qms-iso13485` — QMS compliance checker, design control tracker
@@ -381,6 +423,7 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 - `gdpr-dsgvo-expert` — GDPR compliance checker, DPIA generator
 
 ### Documentation
+
 - Comprehensive README.md with all 42 skills
 - Domain-specific README files (6 domains)
 - CLAUDE.md development guide
@@ -388,6 +431,7 @@ Major rewrite of existing skills following Anthropic's agent skills specificatio
 - Real-world scenario walkthroughs
 
 ### Automation
+
 - 20+ verified production-ready Python CLI tools
 - 90+ comprehensive reference guides
 - Atlassian MCP Server integration

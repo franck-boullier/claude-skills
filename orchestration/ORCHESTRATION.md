@@ -43,6 +43,7 @@ Pick the persona whose judgment fits the problem. Personas carry opinions, prior
 | Everything at once, alone | `solo-founder` | Cross-domain prioritization |
 
 **Activation:**
+
 ```
 Load agents/personas/startup-cto.md
 ```
@@ -157,6 +158,7 @@ Best for: repeatable processes, content pipelines, compliance checklists.
 Here is a complete orchestration for launching a B2B SaaS product.
 
 ### Setup
+
 ```
 Objective: Launch invoicing tool for freelancers
 Team: 1 developer, 1 marketer
@@ -167,6 +169,7 @@ Budget: $3K
 ### Execution
 
 **Week 1-2: Build**
+
 ```
 Persona: startup-cto
 Skills:
@@ -180,6 +183,7 @@ Deliverables:
 ```
 
 **Week 3-4: Prepare Launch**
+
 ```
 Persona: growth-marketer
 Skills:
@@ -196,6 +200,7 @@ Deliverables:
 ```
 
 **Week 5: Launch**
+
 ```
 Persona: solo-founder
 Skills:
@@ -210,6 +215,7 @@ Deliverables:
 ```
 
 **Week 6: Iterate**
+
 ```
 Persona: solo-founder
 Skills:
@@ -237,16 +243,19 @@ Deliverables:
 ## Quick Reference
 
 ### Persona Activation
+
 ```
 Load agents/personas/<name>.md
 ```
 
 ### Skill Loading
+
 ```
 Load <domain>/<skill-name>/SKILL.md
 ```
 
 ### Phase Handoff
+
 ```
 Phase [N] complete.
 Decisions: [list]
@@ -256,7 +265,9 @@ Switching to: [persona] + [skills]
 ```
 
 ### Available Personas
+
 See [agents/personas/README.md](../agents/personas/README.md)
 
 ### Available Skills
+
 See the [skill catalog](../README.md) — 177 skills across 12 domains.

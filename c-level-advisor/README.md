@@ -53,18 +53,21 @@ npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/cto-adv
 This C-Level advisory skills collection provides executive leadership guidance for strategic decision-making, organizational development, and stakeholder management.
 
 **What's Included:**
+
 - **2 executive-level skills** for CEO and CTO roles
 - **6 Python analysis tools** for strategy, finance, tech debt, and team scaling
 - **Comprehensive frameworks** for executive decision-making, board governance, and technology leadership
 - **Ready-to-use templates** for board presentations, ADRs, and strategic planning
 
 **Ideal For:**
+
 - CEOs and founders at startups and scale-ups
 - CTOs and VP Engineering roles
 - Executive leadership teams
 - Board members and advisors
 
 **Key Benefits:**
+
 - 🎯 **Strategic clarity** with structured decision-making frameworks
 - 📊 **Data-driven decisions** with financial and technical analysis tools
 - 🚀 **Faster execution** with proven templates and best practices
@@ -75,11 +78,13 @@ This C-Level advisory skills collection provides executive leadership guidance f
 ## 📦 Skills Catalog
 
 ### 1. CEO Advisor
+
 **Status:** ✅ Production Ready | **Version:** 1.0
 
 **Purpose:** Executive leadership guidance for strategic decision-making, organizational development, and stakeholder management.
 
 **Key Capabilities:**
+
 - Strategic planning and initiative evaluation
 - Financial scenario modeling and business outcomes
 - Executive decision framework (structured methodology)
@@ -88,16 +93,19 @@ This C-Level advisory skills collection provides executive leadership guidance f
 - Stakeholder communication best practices
 
 **Python Tools:**
+
 - `strategy_analyzer.py` - Evaluate strategic initiatives and competitive positioning
 - `financial_scenario_analyzer.py` - Model financial scenarios and business outcomes
 
 **Core Workflows:**
+
 1. Strategic planning and initiative evaluation
 2. Financial scenario modeling
 3. Board and investor communication
 4. Organizational culture development
 
 **Use When:**
+
 - Making strategic decisions (market expansion, product pivots, fundraising)
 - Preparing board presentations
 - Modeling business scenarios
@@ -109,11 +117,13 @@ This C-Level advisory skills collection provides executive leadership guidance f
 ---
 
 ### 2. CTO Advisor
+
 **Status:** ✅ Production Ready | **Version:** 1.0
 
 **Purpose:** Technical leadership guidance for engineering teams, architecture decisions, and technology strategy.
 
 **Key Capabilities:**
+
 - Technical debt assessment and management
 - Engineering team scaling and structure planning
 - Technology evaluation and selection frameworks
@@ -122,16 +132,19 @@ This C-Level advisory skills collection provides executive leadership guidance f
 - Build vs. buy analysis
 
 **Python Tools:**
+
 - `tech_debt_analyzer.py` - Quantify and prioritize technical debt
 - `team_scaling_calculator.py` - Model engineering team growth and structure
 
 **Core Workflows:**
+
 1. Technical debt assessment and management
 2. Engineering team scaling and structure
 3. Technology evaluation and selection
 4. Architecture decision documentation
 
 **Use When:**
+
 - Managing technical debt
 - Scaling engineering teams
 - Evaluating new technologies or frameworks
@@ -147,16 +160,19 @@ This C-Level advisory skills collection provides executive leadership guidance f
 ### For CEOs
 
 1. **Install CEO Advisor:**
+
    ```bash
    npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/ceo-advisor
    ```
 
 2. **Evaluate Strategic Initiative:**
+
    ```bash
    python ceo-advisor/scripts/strategy_analyzer.py strategy-doc.md
    ```
 
 3. **Model Financial Scenarios:**
+
    ```bash
    python ceo-advisor/scripts/financial_scenario_analyzer.py scenarios.yaml
    ```
@@ -169,16 +185,19 @@ This C-Level advisory skills collection provides executive leadership guidance f
 ### For CTOs
 
 1. **Install CTO Advisor:**
+
    ```bash
    npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/cto-advisor
    ```
 
 2. **Analyze Technical Debt:**
+
    ```bash
    python cto-advisor/scripts/tech_debt_analyzer.py /path/to/codebase
    ```
 
 3. **Plan Team Scaling:**
+
    ```bash
    python cto-advisor/scripts/team_scaling_calculator.py --current-size 10 --target-size 50
    ```
@@ -310,16 +329,19 @@ This C-Level advisory skills collection provides executive leadership guidance f
 ### CEO Advisor Impact
 
 **Strategic Clarity:**
+
 - 40% improvement in decision-making speed
 - 50% reduction in strategic initiative failures
 - 60% improvement in stakeholder alignment
 
 **Financial Performance:**
+
 - 30% better accuracy in financial projections
 - 45% improvement in scenario planning effectiveness
 - 25% reduction in unexpected costs
 
 **Board & Investor Relations:**
+
 - 50% reduction in board presentation preparation time
 - 70% improvement in board feedback quality
 - 40% better investor communication clarity
@@ -327,16 +349,19 @@ This C-Level advisory skills collection provides executive leadership guidance f
 ### CTO Advisor Impact
 
 **Technical Debt Management:**
+
 - 60% improvement in tech debt visibility
 - 40% reduction in critical tech debt items
 - 50% better resource allocation for debt reduction
 
 **Team Scaling:**
+
 - 45% faster time-to-productivity for new hires
 - 35% reduction in team scaling mistakes
 - 50% improvement in organizational design clarity
 
 **Technology Decisions:**
+
 - 70% reduction in technology evaluation time
 - 55% improvement in build vs. buy accuracy
 - 40% better architecture decision documentation
@@ -346,21 +371,25 @@ This C-Level advisory skills collection provides executive leadership guidance f
 ## 🔗 Integration with Other Teams
 
 **CEO ↔ Product:**
+
 - Strategic vision → Product roadmap
 - Market insights → Product strategy
 - Customer feedback → Product prioritization
 
 **CEO ↔ CTO:**
+
 - Technology strategy → Business strategy
 - Engineering capacity → Business planning
 - Technical decisions → Strategic initiatives
 
 **CTO ↔ Engineering:**
+
 - Architecture decisions → Implementation
 - Tech debt priorities → Sprint planning
 - Team structure → Engineering delivery
 
 **CTO ↔ Product:**
+
 - Technical feasibility → Product planning
 - Platform capabilities → Product features
 - Engineering metrics → Product velocity
