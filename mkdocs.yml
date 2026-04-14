@@ -1,6 +1,6 @@
 site_name: Claude Code Skills & Agent Plugins
 site_url: https://alirezarezvani.github.io/claude-skills/
-site_description: "233 production-ready skills, 25 agents, 3 personas, and an orchestration protocol for 11 AI coding tools. Reusable expertise for engineering, product, marketing, compliance, and more."
+site_description: "235 production-ready skills, 28 agents, 3 personas, and an orchestration protocol for 12 AI coding tools. Reusable expertise for engineering, product, marketing, compliance, and more."
 site_author: Alireza Rezvani
 repo_url: https://github.com/alirezarezvani/claude-skills
 repo_name: alirezarezvani/claude-skills
@@ -223,6 +223,7 @@ nav:
       - "Docker Development": skills/engineering/docker-development.md
       - "LLM Wiki": skills/engineering/llm-wiki.md
       - "TC Tracker": skills/engineering/tc-tracker.md
+      - "Karpathy Coder": skills/engineering/karpathy-coder.md
       - AgentHub:
         - "AgentHub": skills/engineering/agenthub.md
         - "/hub:init": skills/engineering/agenthub-init.md
@@ -427,3 +428,4 @@ nav:
     - "/wiki-lint": commands/wiki-lint.md
     - "/wiki-log": commands/wiki-log.md
     - "/tc": commands/tc.md
+    - "/karpathy-check": commands/karpathy-check.md
