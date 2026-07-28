@@ -2,7 +2,7 @@
 name: slo-architect
 description: Use when defining, reviewing, or operating SLOs/SLIs/error budgets. Triggers on "define an SLO", "what should our SLO be", "error budget", "burn rate", "SLI", "service level objective", "Google SRE workbook", "multi-window burn-rate alert", or any reliability-target question. Ships SLO designer, error-budget calculator with multi-window burn-rate thresholds, and SLO reviewer that catches the common bugs (target too aggressive, window too short, conflicting SLOs, no SLI definition). 4 references on SLO principles + SLI design + error budget math + composition with feature-flags-architect/chaos-engineering/kubernetes-operator. NOT a generic observability skill — specifically the SLO discipline.
 context: fork
-version: 2.4.4
+version: 2.9.0
 author: claude-code-skills
 license: MIT
 tags: [slo, sli, sla, error-budget, burn-rate, sre, reliability, google-sre-workbook, observability]
@@ -155,7 +155,7 @@ This skill explicitly composes with three others:
 | `chaos-engineering` | Blast-radius calculator already takes monthly error budget as input — define it here |
 | `kubernetes-operator` | Operator capability L4 (Deep Insights) requires SLOs + Prometheus rules |
 
-The `error_budget_calculator.py` output is in the same shape `chaos-engineering/scripts/blast_radius_calculator.py` expects on stdin.
+The `error_budget_calculator.py` output is in the same shape `engineering/skills/chaos-engineering/scripts/blast_radius_calculator.py` expects on stdin.
 
 ## Workflows
 

@@ -17,4 +17,22 @@ description: "4 finance skills — finance agent skill and Claude Code plugin fo
 
 <div class="grid cards" markdown>
 
+-   **[Finance Skills — Router](finance-skills.md)**
+
+    ---
+
+    This plugin bundles 2 finance skills (this router is the 3rd folder under finance/skills/). Each skill is self-contai...
+
+-   **[Financial Analyst Skill](financial-analyst.md)**
+
+    ---
+
+    Production-ready financial analysis toolkit providing ratio analysis, DCF valuation, budget variance analysis, and ro...
+
+-   **[SaaS Metrics Coach](saas-metrics-coach.md)**
+
+    ---
+
+    Act as a senior SaaS CFO advisor. Take raw business numbers, calculate key health metrics, benchmark against industry...
+
 </div>

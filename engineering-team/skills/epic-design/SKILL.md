@@ -65,6 +65,7 @@ Before writing a single line of code, do ALL of the following in order.
 ### B. Inspect every uploaded image asset
 
 Run `scripts/inspect-assets.py` on every image the user has provided.
+> **Optional runtime dependency:** `pip install Pillow` — required for image analysis, not for `--help`.
 For each image, determine:
 
 1. **Format** — JPEG never has a real alpha channel. PNG may have a fake one.
@@ -252,7 +253,6 @@ These are MANDATORY in every output:
 | File | What's Inside | When to Read |
 |------|--------------|--------------|
 | `references/asset-pipeline.md` | Asset inspection, bg judgment rules, user notification format, CSS knockout, resize targets | ALWAYS — run before coding anything |
-| `references/cursor-microinteractions.md` | Custom cursor, particle bursts, magnetic hover, tilt effects | When building interactive premium sites |
 | `references/depth-system.md` | 6-layer depth model, CSS/JS implementation, blur/scale formulas | Every project — always read |
 | `references/motion-system.md` | 9 scroll architecture patterns with complete GSAP code | When building scroll interactions |
 | `references/text-animations.md` | 13 text techniques with full implementation code | When animating any text |

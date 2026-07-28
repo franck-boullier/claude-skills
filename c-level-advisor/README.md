@@ -36,10 +36,10 @@ npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor --agent
 
 ```bash
 # CEO Advisor
-npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/ceo-advisor
+npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/skills/ceo-advisor
 
 # CTO Advisor
-npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/cto-advisor
+npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/skills/cto-advisor
 ```
 
 **Supported Agents:** Claude Code, Cursor, VS Code, Copilot, Goose, Amp, Codex
@@ -112,7 +112,7 @@ This C-Level advisory skills collection provides executive leadership guidance f
 - Building organizational culture
 - Managing stakeholder relationships
 
-**Learn More:** [ceo-advisor/SKILL.md](ceo-advisor/SKILL.md)
+**Learn More:** [ceo-advisor/SKILL.md](skills/ceo-advisor/SKILL.md)
 
 ---
 
@@ -151,7 +151,7 @@ This C-Level advisory skills collection provides executive leadership guidance f
 - Making architecture decisions
 - Measuring engineering performance
 
-**Learn More:** [cto-advisor/SKILL.md](cto-advisor/SKILL.md)
+**Learn More:** [cto-advisor/SKILL.md](skills/cto-advisor/SKILL.md)
 
 ---
 
@@ -162,7 +162,7 @@ This C-Level advisory skills collection provides executive leadership guidance f
 1. **Install CEO Advisor:**
 
    ```bash
-   npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/ceo-advisor
+   npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/skills/ceo-advisor
    ```
 
 2. **Evaluate Strategic Initiative:**
@@ -187,7 +187,7 @@ This C-Level advisory skills collection provides executive leadership guidance f
 1. **Install CTO Advisor:**
 
    ```bash
-   npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/cto-advisor
+   npx ai-agent-skills install alirezarezvani/claude-skills/c-level-advisor/skills/cto-advisor
    ```
 
 2. **Analyze Technical Debt:**
@@ -405,5 +405,5 @@ This C-Level advisory skills collection provides executive leadership guidance f
 ---
 
 **Last Updated:** January 2026
-**Skills Deployed:** 2/2 C-Level advisory skills production-ready
+**Skills Deployed:** 66/66 C-Level advisory skills production-ready
 **Total Tools:** 6 Python analysis tools (strategy, finance, tech debt, team scaling)

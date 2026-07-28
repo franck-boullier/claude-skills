@@ -41,7 +41,7 @@ For each file with YAML frontmatter:
 Run SEO checker on built HTML pages:
 
 ```bash
-python3 marketing-skill/seo-audit/scripts/seo_checker.py --file site/{path}/index.html
+python3 marketing-skill/skills/seo-audit/scripts/seo_checker.py --file site/{path}/index.html
 ```
 
 ## Phase 3: Content Quality
@@ -51,7 +51,7 @@ python3 marketing-skill/seo-audit/scripts/seo_checker.py --file site/{path}/inde
 **Readability:** Run content scorer:
 
 ```bash
-python3 marketing-skill/content-production/scripts/content_scorer.py {file}
+python3 marketing-skill/skills/content-production/scripts/content_scorer.py {file}
 ```
 
 Target: readability ≥ 70, structure ≥ 60.
@@ -59,7 +59,7 @@ Target: readability ≥ 70, structure ≥ 60.
 **AI detection** (on non-generated files only):
 
 ```bash
-python3 marketing-skill/content-humanizer/scripts/humanizer_scorer.py {file}
+python3 marketing-skill/skills/content-humanizer/scripts/humanizer_scorer.py {file}
 ```
 
 Flag pages < 50. Fix AI clichés: "delve", "leverage", "it's important to note", "comprehensive".
@@ -99,7 +99,7 @@ mkdocs build
 Analyze the sitemap:
 
 ```bash
-python3 marketing-skill/site-architecture/scripts/sitemap_analyzer.py site/sitemap.xml
+python3 marketing-skill/skills/site-architecture/scripts/sitemap_analyzer.py site/sitemap.xml
 ```
 
 Verify all pages appear, no duplicates, no broken URLs.

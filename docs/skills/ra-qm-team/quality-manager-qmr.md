@@ -8,7 +8,7 @@ description: "Senior Quality Manager Responsible Person (QMR) for HealthTech and
 <div class="page-meta" markdown>
 <span class="meta-badge">:material-shield-check-outline: Regulatory & Quality</span>
 <span class="meta-badge">:material-identifier: `quality-manager-qmr`</span>
-<span class="meta-badge">:material-github: <a href="https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/quality-manager-qmr/SKILL.md">Source</a></span>
+<span class="meta-badge">:material-github: <a href="https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/quality-manager-qmr/SKILL.md">Source</a></span>
 </div>
 
 <div class="install-banner" markdown>
@@ -163,7 +163,7 @@ Prepared By: [QMR Name]
 | Quality objectives changes | Updated objectives document | QMR |
 | Process improvement needs | Improvement project charters | Process owners |
 
-See: [references/management-review-guide.md](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/quality-manager-qmr/references/management-review-guide.md)
+See: [references/management-review-guide.md](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/quality-manager-qmr/references/management-review-guide.md)
 
 ---
 
@@ -219,7 +219,7 @@ Establish, monitor, and report quality performance indicators.
 | 80-90% of target | Below | Improvement plan required |
 | <80% of target | Critical | Immediate intervention |
 
-See: [references/quality-kpi-framework.md](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/quality-manager-qmr/references/quality-kpi-framework.md)
+See: [references/quality-kpi-framework.md](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/quality-manager-qmr/references/quality-kpi-framework.md)
 
 ---
 
@@ -344,7 +344,7 @@ Monitor and maintain regulatory compliance across jurisdictions.
 | Jurisdiction | Regulation | Requirement | Status Tracking |
 |--------------|------------|-------------|-----------------|
 | EU | MDR 2017/745 | CE marking, Notified Body | Technical file, annual review |
-| USA | 21 CFR 820 | FDA registration, QSR compliance | Annual registration, inspections |
+| USA | 21 CFR 820 (QMSR) | FDA registration, QMSR compliance — 21 CFR 820 incorporates ISO 13485:2016 by reference (effective 2026-02-02; formerly the QSR) | Annual registration, inspections |
 | International | ISO 13485 | QMS certification | Surveillance audits |
 | Germany | MPG/MPDG | National implementation | Competent authority filings |
 
@@ -358,6 +358,8 @@ Monitor and maintain regulatory compliance across jurisdictions.
 6. Document compliance status in management review
 7. Maintain inspection readiness checklist
 8. **Validation:** All applicable requirements mapped; no expired registrations
+
+> **Decision discipline:** This compliance matrix is decision support, not a compliance determination. Final regulatory-status calls are yours to make as QMR and must be signed off by the named owner; route FDA-specific questions to Regulatory Affairs and verify current 21 CFR 820 (QMSR) / ISO 13485:2016 text at fda.gov before relying on any citation here.
 
 ### Regulatory Authority Interface
 
@@ -438,7 +440,7 @@ immediately    Yes─┴─No
 
 | Tool | Purpose | Usage |
 |------|---------|-------|
-| [management_review_tracker.py](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/quality-manager-qmr/scripts/management_review_tracker.py) | Track review inputs, actions, metrics | `python management_review_tracker.py --help` |
+| [management_review_tracker.py](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/quality-manager-qmr/scripts/management_review_tracker.py) | Track review inputs, actions, metrics | `python management_review_tracker.py --help` |
 
 **Management Review Tracker Features:**
 - Track input collection status from process owners
@@ -450,8 +452,8 @@ immediately    Yes─┴─No
 
 | Document | Content |
 |----------|---------|
-| [management-review-guide.md](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/quality-manager-qmr/references/management-review-guide.md) | ISO 13485 Clause 5.6 requirements, input/output templates, action tracking |
-| [quality-kpi-framework.md](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/quality-manager-qmr/references/quality-kpi-framework.md) | KPI categories, targets, calculations, dashboard templates |
+| [management-review-guide.md](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/quality-manager-qmr/references/management-review-guide.md) | ISO 13485 Clause 5.6 requirements, input/output templates, action tracking |
+| [quality-kpi-framework.md](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/quality-manager-qmr/references/quality-kpi-framework.md) | KPI categories, targets, calculations, dashboard templates |
 
 ### Quick Reference: Management Review Inputs (ISO 13485 Clause 5.6.2)
 
@@ -480,7 +482,7 @@ immediately    Yes─┴─No
 
 | Skill | Integration Point |
 |-------|-------------------|
-| [quality-manager-qms-iso13485](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/quality-manager-qms-iso13485) | QMS process management |
-| [capa-officer](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/capa-officer) | CAPA system oversight |
-| [qms-audit-expert](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/qms-audit-expert) | Internal audit program |
-| [quality-documentation-manager](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/quality-documentation-manager) | Document control oversight |
+| [quality-manager-qms-iso13485](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/quality-manager-qms-iso13485) | QMS process management |
+| [capa-officer](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/capa-officer) | CAPA system oversight |
+| [qms-audit-expert](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/qms-audit-expert) | Internal audit program |
+| [quality-documentation-manager](https://github.com/alirezarezvani/claude-skills/tree/main/ra-qm-team/skills/quality-documentation-manager) | Document control oversight |

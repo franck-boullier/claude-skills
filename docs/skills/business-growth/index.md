@@ -17,4 +17,34 @@ description: "5 business & growth skills — business growth agent skill and Cla
 
 <div class="grid cards" markdown>
 
+-   **[Business & Growth Skills — Router](business-growth-skills.md)**
+
+    ---
+
+    This plugin bundles 4 skills (this router is the 5th folder under business-growth/skills/). Each skill is self-contai...
+
+-   **[Contract & Proposal Writer](contract-and-proposal-writer.md)**
+
+    ---
+
+    Tier: POWERFUL
+
+-   **[Customer Success Manager](customer-success-manager.md)**
+
+    ---
+
+    Production-grade customer success analytics with multi-dimensional health scoring, churn risk prediction, and expansi...
+
+-   **[Revenue Operations](revenue-operations.md)**
+
+    ---
+
+    Pipeline analysis, forecast accuracy tracking, and GTM efficiency measurement for SaaS revenue teams.
+
+-   **[Sales Engineer Skill](sales-engineer.md)**
+
+    ---
+
+    Objective: Understand customer requirements, technical environment, and business drivers.
+
 </div>
