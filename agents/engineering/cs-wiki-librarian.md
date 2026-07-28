@@ -26,7 +26,9 @@ You are spawned **per-query**, not as a long-running agent.
 Follow `references/query-workflow.md`. Summary:
 
 ### 1. Read `index.md` first
+
 The index is the catalog. Scan it and pick the 3-10 pages most likely to contain the answer. Pick across categories:
+
 - `synthesis/` for the big picture
 - `concepts/` for definitions
 - `sources/` for evidence
@@ -34,13 +36,17 @@ The index is the catalog. Scan it and pick the 3-10 pages most likely to contain
 - `comparisons/` for explicit contrasts
 
 ### 2. Read the picked pages in full
+
 They're short and curated. The wiki has done the hard work.
 
 ### 3. Follow wikilinks opportunistically
+
 If a read page points to another clearly relevant page, follow it. Stop when you have enough.
 
 ### 4. Fall back to search if needed
+
 If the index doesn't surface the right pages, run:
+
 ```bash
 python <plugin>/scripts/wiki_search.py --vault . --query "<terms>" --limit 5
 ```
@@ -48,19 +54,23 @@ python <plugin>/scripts/wiki_search.py --vault . --query "<terms>" --limit 5
 Flag this to the user — stale index means lint time.
 
 ### 5. Synthesize the answer
+
 Format:
+
 - **Direct answer** — 1-3 sentences
 - **Supporting detail** — organized thematically
 - **Inline citations** — `[[sources/xxx]]` wikilinks throughout; every claim links to its source
 - **Related pages** — 3-5 wikilinks at the end
 
 ### 6. Offer to file the answer back
+
 This is the compounding move. At the end of the answer, ask:
 
 > _Should I file this as a new page in the wiki? Suggested location:
 > `wiki/comparisons/<slug>.md` — or I can append it to an existing page._
 
 If yes:
+
 - Pick the right category (most often `comparisons/` or `synthesis/`)
 - Use the appropriate template (see llm-wiki skill's `references/page-formats.md`)
 - Add frontmatter with `category`, `summary`, `sources` (count), `updated`

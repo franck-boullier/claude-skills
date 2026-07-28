@@ -82,6 +82,7 @@ The cs-agile-product-owner agent bridges strategic product goals with sprint-lev
 **Goal:** Decompose a large epic into sprint-ready user stories with acceptance criteria
 
 **Steps:**
+
 1. **Define the Epic** - Document the epic with clear scope:
    - Business objective and user value
    - Target user persona(s)
@@ -89,6 +90,7 @@ The cs-agile-product-owner agent bridges strategic product goals with sprint-lev
    - Known constraints and dependencies
 
 2. **Create Epic YAML** - Structure the epic for the story generator:
+
    ```yaml
    epic:
      title: "User Dashboard"
@@ -101,6 +103,7 @@ The cs-agile-product-owner agent bridges strategic product goals with sprint-lev
    ```
 
 3. **Generate Stories** - Run the user story generator:
+
    ```bash
    python ../../product-team/agile-product-owner/scripts/user_story_generator.py epic.yaml
    ```
@@ -121,6 +124,7 @@ The cs-agile-product-owner agent bridges strategic product goals with sprint-lev
 **Time Estimate:** 2-4 hours per epic
 
 **Example:**
+
 ```bash
 # Create epic definition
 cat > dashboard-epic.yaml << 'EOF'
@@ -147,6 +151,7 @@ cat ../../product-team/agile-product-owner/references/sprint-planning-guide.md
 **Goal:** Plan a sprint with clear goals, selected stories, and identified risks
 
 **Steps:**
+
 1. **Calculate Capacity** - Determine team availability:
    - List team members and available days
    - Account for PTO, on-call, training, meetings
@@ -165,12 +170,14 @@ cat ../../product-team/agile-product-owner/references/sprint-planning-guide.md
    - Valuable to users or business
 
 4. **Select Stories** - Pull from prioritized backlog:
+
    ```bash
    # Prioritize candidates if not already ordered
    python ../../product-team/product-manager-toolkit/scripts/rice_prioritizer.py sprint-candidates.csv --capacity 12
    ```
 
 5. **Document the Plan** - Use the sprint planning template:
+
    ```bash
    cat ../../product-team/agile-product-owner/assets/sprint_planning_template.md
    ```
@@ -186,6 +193,7 @@ cat ../../product-team/agile-product-owner/references/sprint-planning-guide.md
 **Time Estimate:** 2-3 hours per sprint planning session
 
 **Example:**
+
 ```bash
 # Prepare sprint candidates
 cat > sprint-candidates.csv << 'EOF'
@@ -208,6 +216,7 @@ cat ../../product-team/agile-product-owner/assets/sprint_planning_template.md
 **Goal:** Maintain a healthy backlog with properly sized, prioritized, and well-defined stories
 
 **Steps:**
+
 1. **Triage New Items** - Process incoming requests:
    - Customer feedback items
    - Bug reports
@@ -221,6 +230,7 @@ cat ../../product-team/agile-product-owner/assets/sprint_planning_template.md
    - Apply story splitting techniques from references
 
 3. **Prioritize with RICE** - Score backlog items:
+
    ```bash
    python ../../product-team/product-manager-toolkit/scripts/rice_prioritizer.py backlog.csv
    ```
@@ -241,6 +251,7 @@ cat ../../product-team/agile-product-owner/assets/sprint_planning_template.md
 **Time Estimate:** 1-2 hours per weekly refinement session
 
 **Example:**
+
 ```bash
 # Export backlog for prioritization
 cat > backlog-q2.csv << 'EOF'
@@ -265,6 +276,7 @@ cat ../../product-team/agile-product-owner/references/user-story-templates.md
 **Goal:** Collaboratively write high-quality user stories with the team
 
 **Steps:**
+
 1. **Prepare the Session** - Gather inputs:
    - Epic or feature description
    - User personas involved
@@ -277,9 +289,11 @@ cat ../../product-team/agile-product-owner/references/user-story-templates.md
    - What are their constraints?
 
 3. **Write Stories Collaboratively** - Use the template:
+
    ```bash
    cat ../../product-team/agile-product-owner/assets/user_story_template.md
    ```
+
    - "As a [persona], I want [capability], so that [benefit]"
    - Focus on user value, not implementation details
    - One story per distinct user action or outcome
@@ -307,6 +321,7 @@ cat ../../product-team/agile-product-owner/references/user-story-templates.md
 **Time Estimate:** 1-2 hours per workshop (covering 1 epic or feature area)
 
 **Example:**
+
 ```bash
 # Generate initial story candidates from epic
 python ../../product-team/agile-product-owner/scripts/user_story_generator.py feature-epic.yaml
@@ -377,18 +392,21 @@ echo "Location: ../../product-team/agile-product-owner/references/user-story-tem
 ## Success Metrics
 
 **Backlog Quality:**
+
 - **Story Readiness:** >80% of sprint candidates meet Definition of Ready
 - **Estimation Accuracy:** Actual effort within 20% of estimate (rolling average)
 - **Story Size:** <5% of stories exceed 13 story points
 - **Acceptance Criteria:** 100% of stories have testable acceptance criteria
 
 **Sprint Execution:**
+
 - **Sprint Goal Achievement:** >85% of sprints meet their stated goal
 - **Velocity Stability:** Velocity variance <20% sprint-to-sprint
 - **Scope Change:** <10% scope change after sprint planning
 - **Completion Rate:** >90% of committed stories completed per sprint
 
 **Stakeholder Value:**
+
 - **Value Delivery:** Every sprint delivers demonstrable user value
 - **Cycle Time:** Average story cycle time <5 days
 - **Lead Time:** Epic to delivery <6 weeks average

@@ -7,6 +7,7 @@ This guide provides comprehensive instructions for creating **cs-* prefixed agen
 ### What are cs-* Agents?
 
 **cs-* agents** are specialized Claude Code agents that orchestrate the 177 existing skills. Each agent:
+
 - References skills via relative paths (`../../marketing-skill/`)
 - Executes Python automation tools from skill packages
 - Follows established workflows and templates
@@ -17,6 +18,7 @@ This guide provides comprehensive instructions for creating **cs-* prefixed agen
 ### ClawHub Publishing Constraints
 
 When skills are published to **ClawHub** (clawhub.com):
+
 - **cs- prefix for slug conflicts only** — applies only on the ClawHub registry when another publisher already owns the slug. Repo folder names and local skill names are never renamed.
 - **No paid/commercial service dependencies** — skills must not require paid third-party API keys or commercial services unless provided by the project itself.
 - **plugin.json** — ONLY fields: `name`, `description`, `version`, `author`, `homepage`, `repository`, `license`, `skills: "./"`.
@@ -75,6 +77,7 @@ tools: [Read, Write, Bash, Grep, Glob]
 ```
 
 **Field Definitions:**
+
 - **name**: Agent identifier with `cs-` prefix (e.g., `cs-content-creator`)
 - **description**: Single sentence describing agent's purpose
 - **skills**: Skill folder this agent references (e.g., `marketing-skill/content-creator`)
@@ -147,6 +150,7 @@ python ../../product-team/product-manager-toolkit/scripts/rice_prioritizer.py fe
 ### Tool Requirements
 
 All Python tools must:
+
 - Use standard library only (or minimal dependencies documented in SKILL.md)
 - Support both JSON and human-readable output
 - Provide `--help` flag with usage information
@@ -156,6 +160,7 @@ All Python tools must:
 ### Error Handling
 
 When Python tools fail:
+
 1. Check file path resolution
 2. Verify input file exists
 3. Check Python version compatibility (3.8+)
@@ -192,6 +197,7 @@ python ../../marketing-skill/content-creator/scripts/seo_optimizer.py article.md
 ### Minimum Requirements
 
 Each agent must document **at least 3 workflows** covering:
+
 1. Primary use case (most common scenario)
 2. Advanced use case (complex scenario)
 3. Integration use case (combining multiple tools)
@@ -305,6 +311,7 @@ Before committing an agent:
 Test these aspects:
 
 **1. Path Resolution**
+
 ```bash
 # From agent directory
 cd agents/marketing/
@@ -312,6 +319,7 @@ ls ../../marketing-skill/content-creator/  # Should list contents
 ```
 
 **2. Python Tool Execution**
+
 ```bash
 # Create test input
 echo "Test content" > test-input.txt
@@ -323,6 +331,7 @@ python ../../marketing-skill/content-creator/scripts/brand_voice_analyzer.py tes
 ```
 
 **3. Knowledge Base Access**
+
 ```bash
 # Verify reference files exist
 cat ../../marketing-skill/content-creator/references/brand_guidelines.md
@@ -331,21 +340,25 @@ cat ../../marketing-skill/content-creator/references/brand_guidelines.md
 ## Domain-Specific Guidelines
 
 ### Marketing Agents (agents/marketing/)
+
 - Focus on content creation, SEO, demand generation
 - Reference: `../../marketing-skill/`
 - Tools: brand_voice_analyzer.py, seo_optimizer.py
 
 ### Product Agents (agents/product/)
+
 - Focus on prioritization, user research, agile workflows
 - Reference: `../../product-team/`
 - Tools: rice_prioritizer.py, user_story_generator.py, okr_cascade_generator.py
 
 ### C-Level Agents (agents/c-level/)
+
 - Focus on strategic decision-making
 - Reference: `../../c-level-advisor/`
 - Tools: Strategic analysis and planning tools
 
 ### Engineering Agents (agents/engineering/)
+
 - Focus on scaffolding, code quality, fullstack development
 - Reference: `../../engineering-team/`
 - Tools: project_scaffolder.py, code_quality_analyzer.py

@@ -16,11 +16,13 @@ Engineering team lead coordinating across specializations: frontend, backend, QA
 ## Skill Integration
 
 ### Development
+
 - `engineering-team/senior-frontend` — React/Next.js, design systems
 - `engineering-team/senior-backend` — APIs, databases, system design
 - `engineering-team/senior-fullstack` — End-to-end feature delivery
 
 ### Quality & Security
+
 - `engineering-team/senior-qa` — Test strategy, automation
 - `engineering-team/playwright-pro` — E2E testing with Playwright
 - `engineering-team/tdd-guide` — Test-driven development
@@ -28,11 +30,13 @@ Engineering team lead coordinating across specializations: frontend, backend, QA
 - `engineering-team/senior-secops` — Security operations, compliance
 
 ### Data & ML
+
 - `engineering-team/senior-data-engineer` — Data pipelines, warehousing
 - `engineering-team/senior-data-scientist` — Analysis, modeling
 - `engineering-team/senior-ml-engineer` — ML systems, deployment
 
 ### Operations
+
 - `engineering-team/senior-devops` — Infrastructure, CI/CD
 - `engineering-team/incident-commander` — Incident management
 - `engineering-team/aws-solution-architect` — Cloud architecture
@@ -41,6 +45,7 @@ Engineering team lead coordinating across specializations: frontend, backend, QA
 ## Core Workflows
 
 ### 1. Incident Response
+
 1. Assess severity and impact via `incident-commander`
 2. Assemble response team by domain
 3. Run incident timeline and RCA
@@ -48,6 +53,7 @@ Engineering team lead coordinating across specializations: frontend, backend, QA
 5. Create follow-up tickets and runbooks
 
 ### 2. Tech Stack Evaluation
+
 1. Define requirements and constraints
 2. Run evaluation matrix via `tech-stack-evaluator`
 3. Score candidates across dimensions
@@ -55,6 +61,7 @@ Engineering team lead coordinating across specializations: frontend, backend, QA
 5. Present recommendation with tradeoffs
 
 ### 3. Cross-Team Feature Delivery
+
 1. Break feature into frontend/backend/data components
 2. Define API contracts between teams
 3. Set up test strategy (unit → integration → E2E)
@@ -62,6 +69,7 @@ Engineering team lead coordinating across specializations: frontend, backend, QA
 5. Monitor rollout with feature flags
 
 ### 4. Team Health Check
+
 1. Review code quality metrics
 2. Assess test coverage and CI pipeline health
 3. Check dependency freshness and security
@@ -69,6 +77,7 @@ Engineering team lead coordinating across specializations: frontend, backend, QA
 5. Identify skill gaps and training needs
 
 ## Output Standards
+
 - Incident reports → timeline, RCA, 5-Why, action items with owners
 - Evaluations → scoring matrix with weighted dimensions
 - Feature plans → RACI matrix with milestone dates

@@ -16,6 +16,7 @@ Google Workspace administration specialist orchestrating the gws CLI for email a
 ## Skill Integration
 
 ### Skill Location
+
 `../../engineering-team/google-workspace-cli/`
 
 ### Python Tools
@@ -68,6 +69,7 @@ Google Workspace administration specialist orchestrating the gws CLI for email a
 **Goal:** Get gws CLI installed, authenticated, and verified.
 
 **Steps:**
+
 1. Run `gws_doctor.py` to check installation and existing auth
 2. If not installed, guide through installation (npm/cargo/binary)
 3. Run `auth_setup_guide.py --guide oauth` for auth instructions
@@ -76,6 +78,7 @@ Google Workspace administration specialist orchestrating the gws CLI for email a
 6. Generate `.env` template with `auth_setup_guide.py --generate-env`
 
 **Example:**
+
 ```bash
 python3 ../../engineering-team/google-workspace-cli/scripts/gws_doctor.py
 python3 ../../engineering-team/google-workspace-cli/scripts/auth_setup_guide.py --guide oauth
@@ -87,12 +90,14 @@ python3 ../../engineering-team/google-workspace-cli/scripts/auth_setup_guide.py 
 **Goal:** Execute persona-based daily workflows using recipes.
 
 **Steps:**
+
 1. Identify user's role and select persona with `gws_recipe_runner.py --personas`
 2. List relevant recipes with `gws_recipe_runner.py --persona <role> --list`
 3. Execute recipes with `gws_recipe_runner.py --run <name>` (use `--dry-run` first)
 4. Pipe output through `output_analyzer.py` for filtering and analysis
 
 **Example:**
+
 ```bash
 python3 ../../engineering-team/google-workspace-cli/scripts/gws_recipe_runner.py --persona pm --list
 python3 ../../engineering-team/google-workspace-cli/scripts/gws_recipe_runner.py --run standup-report --dry-run
@@ -104,6 +109,7 @@ gws recipes standup-report --json | python3 ../../engineering-team/google-worksp
 **Goal:** Audit Workspace security configuration and remediate findings.
 
 **Steps:**
+
 1. Run `workspace_audit.py` for full security assessment
 2. Review findings, prioritizing FAIL items
 3. Filter findings through `output_analyzer.py` for actionable items
@@ -111,6 +117,7 @@ gws recipes standup-report --json | python3 ../../engineering-team/google-worksp
 5. Re-run audit to verify fixes
 
 **Example:**
+
 ```bash
 python3 ../../engineering-team/google-workspace-cli/scripts/workspace_audit.py --json
 python3 ../../engineering-team/google-workspace-cli/scripts/workspace_audit.py --json | \
@@ -122,6 +129,7 @@ python3 ../../engineering-team/google-workspace-cli/scripts/workspace_audit.py -
 **Goal:** Generate multi-step gws scripts for recurring operations.
 
 **Steps:**
+
 1. Identify the workflow from recipe templates
 2. Use `gws_recipe_runner.py --describe <name>` for command sequences
 3. Customize commands with user-specific parameters
@@ -129,6 +137,7 @@ python3 ../../engineering-team/google-workspace-cli/scripts/workspace_audit.py -
 5. Combine into shell scripts or scheduled tasks using `workspace-config.json` template
 
 **Example:**
+
 ```bash
 python3 ../../engineering-team/google-workspace-cli/scripts/gws_recipe_runner.py --describe morning-briefing
 # Customize and test

@@ -32,11 +32,13 @@
 **Purpose**: Stage changes and create a conventional commit without pushing
 
 **Usage**:
+
 ```
 /git:cm
 ```
 
 **What it does**:
+
 1. Shows `git status --short`
 2. Reviews each file diff for secrets
 3. Stages files intentionally
@@ -52,11 +54,13 @@
 **Purpose**: Complete git workflow with quality checks
 
 **Usage**:
+
 ```
 /git:cp
 ```
 
 **What it does**:
+
 1. Runs `/review` for quality checks
 2. Stages changes
 3. Creates conventional commit
@@ -72,12 +76,14 @@
 **Purpose**: Create a PR from current branch
 
 **Usage**:
+
 ```
 /git:pr              # PR to main
 /git:pr dev          # PR to dev branch
 ```
 
 **What it does**:
+
 1. Verifies quality checks passed
 2. Creates PR using template
 3. Adds appropriate labels
@@ -94,11 +100,13 @@
 **Purpose**: Run all quality checks before pushing
 
 **Usage**:
+
 ```
 /review
 ```
 
 **What it checks**:
+
 - ✅ YAML linting (workflows)
 - ✅ GitHub workflow schema validation
 - ✅ Python syntax (all skill directories)
@@ -114,11 +122,13 @@
 **Purpose**: Scan for security issues
 
 **Usage**:
+
 ```
 /security-scan
 ```
 
 **What it checks**:
+
 - 🔍 Gitleaks (committed secrets detection)
 - 🔍 Safety (Python dependency vulnerabilities)
 
@@ -196,6 +206,7 @@ All commits follow **Conventional Commits**:
 **Scopes**: `marketing-skill`, `product-team`, `c-level-advisor`, `engineering-team`, `ra-qm-team`, `workflows`, `docs`, `ci`
 
 **Examples**:
+
 ```
 feat(marketing-skill): add LinkedIn content framework
 fix(product-team): correct RICE prioritization calculation
@@ -284,15 +295,18 @@ Add label: emergency, skip-review, or hotfix
 These commands work seamlessly with the GitHub automation:
 
 **After running `/git:cp`**:
+
 - Triggers CI Quality Gate workflow
 - Shows results in GitHub Actions
 
 **After running `/git:pr`**:
+
 - Triggers Claude Code Review
 - Runs CI Quality Gate
 - Updates project board status
 
 **After merging PR**:
+
 - Auto-closes linked issues
 - Updates project board to "Done"
 - Posts completion comments
@@ -326,17 +340,20 @@ These commands work seamlessly with the GitHub automation:
 ## 💡 Tips
 
 **Before committing**:
+
 - ✅ Run `/review` to catch issues early
 - ✅ Run `/security-scan` if adding dependencies
 - ✅ Test skills with Claude before pushing
 
 **When creating PRs**:
+
 - ✅ Link related issues (`Fixes #123`)
 - ✅ Fill out PR template completely
 - ✅ Add appropriate labels
 - ✅ Request specific reviewers
 
 **For quality**:
+
 - ✅ Keep commits focused and atomic
 - ✅ Write clear, descriptive commit messages
 - ✅ Follow conventional commit format

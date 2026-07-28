@@ -11,6 +11,7 @@ Execute all 7 phases. Auto-fix non-destructive issues. Never change URLs. Preser
 ## Phase 1: Discovery
 
 Find all target markdown files:
+
 - `docs/**/*.md` — all documentation pages
 - `README.md` files in domain root directories
 - If `$ARGUMENTS` specifies a path, scope to that path only
@@ -24,18 +25,21 @@ Identify recently changed files: `git log --oneline -2 --name-only -- docs/ READ
 For each file with YAML frontmatter:
 
 **Title** (`title:` field):
+
 - Must be 50-60 characters
 - Must contain a primary keyword
 - Must be unique across all pages
 - Auto-fix generic titles using domain context
 
 **Description** (`description:` field):
+
 - Must be 120-160 characters
 - Must contain primary keyword
 - Must be unique — no duplicates
 - Auto-fix from SKILL.md frontmatter or first paragraph
 
 Run SEO checker on built HTML pages:
+
 ```bash
 python3 marketing-skill/seo-audit/scripts/seo_checker.py --file site/{path}/index.html
 ```
@@ -45,15 +49,19 @@ python3 marketing-skill/seo-audit/scripts/seo_checker.py --file site/{path}/inde
 **Heading structure:** One H1 per page, no skipped levels, keywords in headings.
 
 **Readability:** Run content scorer:
+
 ```bash
 python3 marketing-skill/content-production/scripts/content_scorer.py {file}
 ```
+
 Target: readability ≥ 70, structure ≥ 60.
 
 **AI detection** (on non-generated files only):
+
 ```bash
 python3 marketing-skill/content-humanizer/scripts/humanizer_scorer.py {file}
 ```
+
 Flag pages < 50. Fix AI clichés: "delve", "leverage", "it's important to note", "comprehensive".
 
 **Do NOT rewrite** pages ranking well — only fix critical issues on those.
@@ -71,9 +79,11 @@ Keyword density: 1-2% for primary. Flag and reduce if > 3%.
 **Internal links:** Verify all `[text](url)` targets exist. Fix broken links.
 
 **Duplicate content:**
+
 ```bash
 grep -rh '^description:' docs/**/*.md | sort | uniq -d
 ```
+
 Make each duplicate unique.
 
 **Orphan pages:** Find pages not in `mkdocs.yml` nav. Add them.
@@ -81,11 +91,13 @@ Make each duplicate unique.
 ## Phase 6: Sitemap
 
 Rebuild the site to regenerate sitemap:
+
 ```bash
 mkdocs build
 ```
 
 Analyze the sitemap:
+
 ```bash
 python3 marketing-skill/site-architecture/scripts/sitemap_analyzer.py site/sitemap.xml
 ```

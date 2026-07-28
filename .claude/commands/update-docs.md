@@ -15,6 +15,7 @@ git status --short
 ```
 
 Classify each change:
+
 - **New skill** — a new folder containing `SKILL.md` under a domain directory
 - **New agent** — a new `.md` file under `agents/`
 - **New command** — a new `.md` file under `commands/`
@@ -62,11 +63,13 @@ Report sync results (skill counts per platform) to the user.
 ### 3a. Domain-level plugin.json
 
 For each domain that had changes, update the domain's `.claude-plugin/plugin.json`:
+
 - Update `description` with accurate skill/tool/reference counts
 - Update `version` if needed
 - Verify `source` paths are correct
 
 Domain plugin.json locations:
+
 - `marketing-skill/.claude-plugin/plugin.json`
 - `engineering-team/.claude-plugin/plugin.json`
 - `engineering/.claude-plugin/plugin.json`
@@ -80,6 +83,7 @@ Domain plugin.json locations:
 ### 3b. Root marketplace.json
 
 Update `.claude-plugin/marketplace.json`:
+
 - Update the top-level `metadata.description` with accurate total counts (skills, tools, references, agents, commands)
 - If a new individual skill plugin entry is needed (for standalone install), add it to the `plugins` array following the existing pattern
 - Update `keywords` arrays if new domains or capabilities were added
@@ -92,6 +96,7 @@ Update `.claude-plugin/marketplace.json`:
 ### 4a. Root CLAUDE.md
 
 Update `/CLAUDE.md` (the root project instructions):
+
 - **Current Scope** line: update skill, tool, reference, agent, and command counts
 - **Repository Structure** comment counts (agents, commands, skills per domain)
 - **Navigation Map** table: verify all domain entries are current
@@ -101,6 +106,7 @@ Update `/CLAUDE.md` (the root project instructions):
 ### 4b. Domain-level CLAUDE.md files
 
 For each domain that had changes, update its `CLAUDE.md`:
+
 - Skill count and list
 - Script/tool count
 - Agent references
@@ -108,6 +114,7 @@ For each domain that had changes, update its `CLAUDE.md`:
 - Any new cross-domain integrations
 
 Domain CLAUDE.md locations:
+
 - `agents/CLAUDE.md`
 - `marketing-skill/CLAUDE.md`
 - `product-team/CLAUDE.md`
@@ -123,6 +130,7 @@ Domain CLAUDE.md locations:
 ### 4c. Root README.md
 
 Update `/README.md`:
+
 - Badge counts (Skills, Agents, Commands)
 - Tagline/intro paragraph skill count
 - Skills Overview table (domain rows with correct counts)
@@ -133,6 +141,7 @@ Update `/README.md`:
 ### 4d. docs/index.md (GitHub Pages homepage)
 
 Update `docs/index.md`:
+
 - `description` meta tag
 - Hero subtitle skill count
 - Grid cards (skills, tools, agents, commands counts)
@@ -141,6 +150,7 @@ Update `docs/index.md`:
 ### 4e. docs/getting-started.md
 
 Update `docs/getting-started.md`:
+
 - `description` meta tag
 - Available Bundles table (skill counts per bundle)
 - Python Tools section (tool count)
@@ -157,6 +167,7 @@ python3 scripts/generate-docs.py
 ```
 
 This generates pages for:
+
 - Every skill (from SKILL.md files)
 - Every agent (from agents/*.md)
 - Every command (from commands/*.md)
@@ -165,6 +176,7 @@ This generates pages for:
 ### 5a. Update mkdocs.yml navigation
 
 Open `mkdocs.yml` and update the `nav:` section:
+
 - Add new skill pages under the correct domain section
 - Add new agent pages under the Agents section
 - Add new command pages under the Commands section
@@ -196,6 +208,7 @@ Run a final consistency check across all updated files:
 2. **Path validation** — Verify all `source` paths in marketplace.json point to existing directories
 
 3. **New script verification** — If new Python scripts were added, verify they run:
+
    ```bash
    python3 path/to/new/script.py --help
    ```

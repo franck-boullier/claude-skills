@@ -28,12 +28,14 @@
 ### Current State Analysis
 
 **Strengths:**
+
 - ✅ 36 production-ready skills with comprehensive domain expertise
 - ✅ 97 Python automation tools
 - ✅ Excellent reference materials and frameworks
 - ✅ Real-world benchmarks and best practices
 
 **Optimization Opportunities:**
+
 - ⚠️ SKILL.md files too long (200-1,000 lines vs. recommended 50-200)
 - ⚠️ Missing metadata (license, version, category)
 - ⚠️ No keywords sections for better discovery
@@ -43,6 +45,7 @@
 ### Expected Improvements
 
 **After Refactoring:**
+
 - ✅ Faster skill loading (50-70% reduction in SKILL.md size)
 - ✅ Better Claude activation (clearer triggers)
 - ✅ Professional metadata (license, versioning, categorization)
@@ -51,6 +54,7 @@
 - ✅ Maintained expertise (moved to references/, not deleted)
 
 **ROI:**
+
 - Implementation time: ~40 hours
 - Benefit: Permanent improvement to all 36 skills
 - User impact: Better Claude performance, clearer documentation
@@ -80,12 +84,14 @@
 ### Optimization Strategy
 
 **Move FROM SKILL.md:**
+
 - Detailed frameworks (reference in 1-2 sentences, full content in references/)
 - Extensive examples (keep 1-2, move rest to references/examples.md)
 - Long procedural guides (summarize, detail in references/)
 - Comprehensive checklists (link to references/)
 
 **Keep IN SKILL.md:**
+
 - Quick start guide (3-5 examples)
 - Core workflow overview (high-level steps)
 - When to use each script/reference (pointers)
@@ -127,6 +133,7 @@ metadata:
 #### content-creator
 
 **Current:**
+
 ```yaml
 ---
 name: content-creator
@@ -135,6 +142,7 @@ description: Comprehensive content marketing skill for creating blog posts, soci
 ```
 
 **Enhanced:**
+
 ```yaml
 ---
 name: content-creator
@@ -161,6 +169,7 @@ content creation, blog posts, SEO, brand voice, social media, content calendar, 
 #### marketing-demand-acquisition
 
 **Enhanced:**
+
 ```yaml
 ---
 name: marketing-demand-acquisition
@@ -184,6 +193,7 @@ demand generation, paid media, paid ads, LinkedIn ads, Google ads, Meta ads, CAC
 #### marketing-strategy-pmm
 
 **Enhanced:**
+
 ```yaml
 ---
 name: marketing-strategy-pmm
@@ -249,6 +259,7 @@ CTO, technical leadership, tech debt, technical debt, engineering team, team sca
 ### Task 1.4: Update All Product Team Skills (5 skills, 2.5 hours)
 
 **Standard metadata template for product skills:**
+
 ```yaml
 license: MIT
 metadata:
@@ -275,6 +286,7 @@ metadata:
 ### Task 1.5: Update All Engineering Skills (14 skills, 7 hours)
 
 **Add to all engineering core skills:**
+
 ```yaml
 license: MIT
 metadata:
@@ -294,6 +306,7 @@ metadata:
 - **senior-qa:** `allowed-tools: Read, Bash` (testing execution)
 
 **AI/ML/Data skills metadata:**
+
 ```yaml
 category: engineering
 domain: [data-science|data-engineering|ml-ops|prompt-engineering|computer-vision]
@@ -303,6 +316,7 @@ tech-stack: PyTorch, TensorFlow, Spark, Airflow, etc
 ### Task 1.6: Update All RA/QM Skills (12 skills, 6 hours)
 
 **Add to all RA/QM skills:**
+
 ```yaml
 license: MIT
 metadata:
@@ -318,6 +332,7 @@ metadata:
 ```
 
 **Add allowed-tools for audit skills:**
+
 - **qms-audit-expert:** `allowed-tools: Read, Grep, Glob` (read-only audit)
 - **isms-audit-expert:** `allowed-tools: Read, Grep, Glob` (read-only audit)
 
@@ -330,6 +345,7 @@ metadata:
 **Time:** ~12 hours (4 hours per skill)
 
 **Selected Pilot Skills:**
+
 1. **content-creator** (Marketing) - 236 lines → target 120 lines
 2. **product-manager-toolkit** (Product) - 352 lines → target 150 lines
 3. **senior-fullstack** (Engineering) - Estimate ~300 lines → target 150 lines
@@ -337,6 +353,7 @@ metadata:
 ### Task 2.1: Refactor content-creator Skill
 
 **Current Issues:**
+
 - 236 lines (good but can be better)
 - Contains full brand voice framework details
 - Extensive social media platform guidance
@@ -347,6 +364,7 @@ metadata:
 #### Step 1: Enhanced Frontmatter (Already done in Phase 1)
 
 #### Step 2: Add Keywords Section
+
 ```markdown
 # Content Creator
 
@@ -359,6 +377,7 @@ content creation, blog posts, SEO, brand voice, social media, content calendar, 
 #### Step 3: Slim Down SKILL.md
 
 **Current Structure (236 lines):**
+
 - Quick Start: 15 lines
 - Core Workflows: 120 lines (4 workflows with details)
 - Key Scripts: 40 lines
@@ -366,6 +385,7 @@ content creation, blog posts, SEO, brand voice, social media, content calendar, 
 - Best Practices: 36 lines
 
 **Refined Structure (120 lines):**
+
 - Quick Start: 15 lines (keep as-is)
 - Core Workflows: 40 lines (overview only, point to references)
 - Key Scripts: 20 lines (essentials only)
@@ -377,11 +397,13 @@ content creation, blog posts, SEO, brand voice, social media, content calendar, 
 **Moved to References:**
 
 Create new reference files:
+
 - `references/brand-voice-detailed-framework.md` - Move detailed archetype descriptions
 - `references/social-media-platform-deep-dive.md` - Move platform-specific details
 - `references/content-creation-examples.md` - Move extensive examples
 
 **Updated SKILL.md Content:**
+
 ```markdown
 ### Establishing Brand Voice
 
@@ -390,16 +412,17 @@ Create new reference files:
    python scripts/brand_voice_analyzer.py existing_content.txt
    ```
 
-2. **Define Voice Attributes**
+1. **Define Voice Attributes**
    - Review personality archetypes in references/brand-voice-detailed-framework.md
    - Select primary and secondary archetypes
    - Document chosen voice
 
-3. **Create Consistent Content**
+2. **Create Consistent Content**
    - Apply voice across all content
    - Verify consistency with analyzer
 
 For complete brand voice framework including all 5 archetypes, tone dimensions, and implementation guide, see [references/brand-voice-detailed-framework.md](references/brand-voice-detailed-framework.md).
+
 ```
 
 #### Step 4: Create New Reference Files
@@ -445,18 +468,21 @@ product management, RICE prioritization, feature prioritization, customer interv
 **Current: 352 lines → Target: 150 lines**
 
 **Keep in SKILL.md:**
+
 - Quick start (3 commands)
 - High-level workflow overview
 - Script usage basics
 - Pointers to references
 
 **Move to References:**
+
 - Detailed RICE methodology → `references/rice-prioritization-guide.md`
 - Interview frameworks → `references/customer-discovery-methods.md`
 - Full PRD templates → Already in references/ ✅
 - Extensive metrics frameworks → `references/product-metrics-frameworks.md`
 
 **Refined Structure:**
+
 ```markdown
 # Product Manager Toolkit
 
@@ -473,17 +499,21 @@ python scripts/rice_prioritizer.py features.csv --capacity 20
 ```
 
 ### Interview Analysis
+
 ```bash
 python scripts/customer_interview_analyzer.py transcript.txt
 ```
 
 ### PRD Creation
+
 Use templates from references/prd_templates.md
 
 ## Core Workflows
 
 ### 1. Feature Prioritization
+
 Score features with RICE framework:
+
 1. Gather feature requests
 2. Score with RICE (Reach × Impact × Confidence / Effort)
 3. Generate roadmap
@@ -491,7 +521,9 @@ Score features with RICE framework:
 For complete RICE methodology, see [references/rice-prioritization-guide.md](references/rice-prioritization-guide.md).
 
 ### 2. Customer Discovery
+
 Extract insights from interviews:
+
 1. Conduct interviews
 2. Analyze with customer_interview_analyzer.py
 3. Synthesize findings
@@ -499,7 +531,9 @@ Extract insights from interviews:
 For interview frameworks and methodologies, see [references/customer-discovery-methods.md](references/customer-discovery-methods.md).
 
 ### 3. PRD Development
+
 Document requirements:
+
 1. Choose template from references/prd_templates.md
 2. Fill sections based on discovery
 3. Collaborate with stakeholders
@@ -507,12 +541,16 @@ Document requirements:
 ## Scripts
 
 ### rice_prioritizer.py
+
 Calculate RICE scores and generate roadmaps.
+
 - Usage: `python scripts/rice_prioritizer.py features.csv --capacity 20`
 - Output: Prioritized list, portfolio analysis, roadmap
 
 ### customer_interview_analyzer.py
+
 Extract insights from interview transcripts.
+
 - Usage: `python scripts/customer_interview_analyzer.py transcript.txt`
 - Output: Pain points, feature requests, themes, sentiment
 
@@ -533,16 +571,21 @@ Extract insights from interview transcripts.
 ## Examples
 
 ### Example 1: Quarterly Planning
+
 User: "Help me prioritize our backlog for Q1"
+
 1. Export features to CSV
 2. Run rice_prioritizer.py with team capacity
 3. Review portfolio balance (quick wins vs big bets)
 
 ### Example 2: Interview Synthesis
+
 User: "Analyze these 5 customer interviews"
+
 1. Run analyzer on each transcript
 2. Identify common themes across interviews
 3. Map to opportunity areas
+
 ```
 
 **Result:** 150 lines (58% reduction from 352)
@@ -573,6 +616,7 @@ metadata:
 ```
 
 #### Step 2: Add Keywords
+
 ```markdown
 ## Keywords
 fullstack development, fullstack engineer, Next.js, React, GraphQL, PostgreSQL, project scaffolding, code quality analysis, architecture patterns, TypeScript, Node.js, fullstack project, end-to-end development, project setup, code analysis, quality metrics
@@ -583,12 +627,14 @@ fullstack development, fullstack engineer, Next.js, React, GraphQL, PostgreSQL, 
 **Estimated Current: ~300 lines → Target: 150 lines**
 
 **Keep:**
+
 - Quick start (3 script examples)
 - High-level capabilities overview
 - Script descriptions
 - Essential workflows
 
 **Move:**
+
 - Detailed architecture patterns → references/
 - Extensive tech stack guide → references/
 - Long development workflow details → references/
@@ -604,12 +650,14 @@ fullstack development, fullstack engineer, Next.js, React, GraphQL, PostgreSQL, 
 ### Task 3.1: Product Team Skills (4 remaining, 8 hours)
 
 Apply same pattern to:
+
 - agile-product-owner
 - product-strategist
 - ux-researcher-designer
 - ui-design-system
 
 **For each:**
+
 1. ✅ Metadata already added (Phase 1)
 2. Add keywords section
 3. Reduce SKILL.md to <200 lines
@@ -618,6 +666,7 @@ Apply same pattern to:
 ### Task 3.2: Engineering Core Skills (8 remaining, 6 hours)
 
 **Skills:**
+
 - senior-architect
 - senior-frontend
 - senior-backend
@@ -628,6 +677,7 @@ Apply same pattern to:
 - senior-security
 
 **For each:**
+
 1. ✅ Metadata already added (Phase 1)
 2. Add appropriate allowed-tools
 3. Add keywords section
@@ -637,6 +687,7 @@ Apply same pattern to:
 ### Task 3.3: Engineering AI/ML/Data Skills (5 skills, 4 hours)
 
 **Skills:**
+
 - senior-data-scientist
 - senior-data-engineer
 - senior-ml-engineer
@@ -644,6 +695,7 @@ Apply same pattern to:
 - senior-computer-vision
 
 **For each:**
+
 1. ✅ Metadata already added (Phase 1)
 2. Add keywords section
 3. Optimize SKILL.md length
@@ -654,6 +706,7 @@ Apply same pattern to:
 **Note:** These skills likely already follow good patterns
 
 **For each:**
+
 1. ✅ Metadata already added (Phase 1)
 2. Add keywords section
 3. Add compliance frameworks to metadata
@@ -698,16 +751,19 @@ Apply same pattern to:
 **Update These Files:**
 
 **README.md:**
+
 - Add note about skill structure following Anthropic best practices
 - Update any references to skill lengths
 - Add "Skills optimized for Claude AI activation" badge
 
 **CLAUDE.md:**
+
 - Add section on skill refactoring
 - Document metadata standards
 - Include keywords best practices
 
 **Create SKILLS_AUTHORING_GUIDE.md:**
+
 ```markdown
 # Skills Authoring Guide
 
@@ -750,6 +806,7 @@ Target length: 100-200 lines
 ### Task 4.3: Version Control (2 hours)
 
 **Create Git Tags:**
+
 ```bash
 # Tag current state before refactoring
 git tag v1.0.0-pre-refactor
@@ -759,6 +816,7 @@ git tag v1.1.0-refactored
 ```
 
 **Commit Strategy:**
+
 ```bash
 # Phase 1
 git commit -m "feat: add professional metadata to all 36 skills
@@ -793,7 +851,7 @@ git commit -m "refactor: optimize remaining 33 skills following Anthropic patter
 
 ### Example 1: content-creator Skill
 
-#### BEFORE (236 lines total):
+#### BEFORE (236 lines total)
 
 ```markdown
 ---
@@ -815,7 +873,7 @@ A comprehensive skill for creating high-performing marketing content with consis
 [... 220 more lines including detailed frameworks, extensive examples, etc.]
 ```
 
-#### AFTER (120 lines total):
+#### AFTER (120 lines total)
 
 ```markdown
 ---
@@ -845,15 +903,19 @@ content creation, blog posts, SEO, brand voice, social media, content calendar, 
 ```bash
 python scripts/brand_voice_analyzer.py existing_content.txt
 ```
+
 Then select archetypes from references/brand-voice-detailed-framework.md
 
 ### SEO-Optimized Content
+
 ```bash
 python scripts/seo_optimizer.py article.md "primary keyword" "secondary,keywords"
 ```
+
 Apply recommendations to improve SEO score to >75/100
 
 ### Social Media Content
+
 1. Review platform in references/social-media-platform-deep-dive.md
 2. Use templates from references/content_frameworks.md
 3. Optimize for platform algorithms
@@ -861,28 +923,36 @@ Apply recommendations to improve SEO score to >75/100
 ## Core Workflows
 
 ### 1. Brand Voice Consistency
+
 Establish and maintain brand voice:
+
 1. Analyze existing content with brand_voice_analyzer.py
 2. Select personality archetypes (see references/brand-voice-detailed-framework.md)
 3. Apply consistently across all content
 4. Verify with analyzer
 
 ### 2. SEO Content Creation
+
 Create optimized content:
+
 1. Research keywords for topic
 2. Write content using framework from references/content_frameworks.md
 3. Run seo_optimizer.py to analyze and score
 4. Apply recommendations (target score >75/100)
 
 ### 3. Platform-Specific Social Media
+
 Optimize for each platform:
+
 1. Select platform and review references/social-media-platform-deep-dive.md
 2. Use appropriate template from references/content_frameworks.md
 3. Follow platform-specific best practices
 4. Schedule with content calendar
 
 ### 4. Content Calendar Planning
+
 Plan and organize content:
+
 1. Use assets/content_calendar_template.md
 2. Balance content types and platforms
 3. Align with marketing campaigns
@@ -891,12 +961,16 @@ Plan and organize content:
 ## Scripts
 
 ### brand_voice_analyzer.py
+
 Analyze text for brand voice characteristics and readability.
+
 - **Usage:** `python scripts/brand_voice_analyzer.py content.txt [json]`
 - **Output:** Formality, tone, readability scores, recommendations
 
 ### seo_optimizer.py
+
 Comprehensive SEO analysis and scoring.
+
 - **Usage:** `python scripts/seo_optimizer.py article.md "keyword" "secondary,keywords"`
 - **Output:** SEO score (0-100), keyword density, meta tags, recommendations
 
@@ -919,6 +993,7 @@ Comprehensive SEO analysis and scoring.
 ## Examples
 
 ### Example 1: Blog Post Creation
+
 ```
 User: "Write a blog post about AI automation for marketing teams"
 1. Review framework: references/content_frameworks.md (Blog Post template)
@@ -929,6 +1004,7 @@ User: "Write a blog post about AI automation for marketing teams"
 ```
 
 ### Example 2: Social Media Campaign
+
 ```
 User: "Create LinkedIn content calendar for product launch"
 1. Review: references/social-media-platform-deep-dive.md (LinkedIn section)
@@ -936,6 +1012,7 @@ User: "Create LinkedIn content calendar for product launch"
 3. Create 30-day calendar with post types
 4. Apply LinkedIn best practices (posting times, formats)
 ```
+
 ```
 
 **Result:** 120 lines (49% reduction), all expertise retained in references/
@@ -1169,6 +1246,7 @@ python tools/generate_metadata.py --skill content-creator --category marketing -
 ```
 
 **Output:**
+
 ```yaml
 ---
 name: content-creator
@@ -1189,11 +1267,13 @@ metadata:
 **Purpose:** Track progress on reducing SKILL.md lengths
 
 **Usage:**
+
 ```bash
 python tools/count_skill_lines.py
 ```
 
 **Output:**
+
 ```
 Skill Line Count Report:
 ========================
@@ -1209,11 +1289,13 @@ Total SKILL.md lines: 10,800 (Target: 5,400)
 **Purpose:** Ensure all reference links work after refactoring
 
 **Usage:**
+
 ```bash
 python tools/validate_references.py
 ```
 
 **Output:**
+
 ```
 Validating references in all skills...
 ✅ content-creator: All 5 references valid
@@ -1228,6 +1310,7 @@ Validating references in all skills...
 ### When to Move Content to References
 
 **Move if:**
+
 - Detailed framework (>50 lines)
 - Comprehensive checklists (>20 items)
 - Extensive examples (>5 examples)
@@ -1235,6 +1318,7 @@ Validating references in all skills...
 - Procedural guides (step-by-step >30 steps)
 
 **Keep in SKILL.md if:**
+
 - Essential workflow (core process)
 - Critical decision points
 - Quick start examples (2-3)
@@ -1246,11 +1330,13 @@ Validating references in all skills...
 **Pattern:** `references/[topic]-[type].md`
 
 **Examples:**
+
 - `rice-prioritization-guide.md` (not `rice.md`)
 - `brand-voice-detailed-framework.md` (not `brand.md`)
 - `social-media-platform-deep-dive.md` (not `social.md`)
 
 **Benefits:**
+
 - Clear what's in the file
 - Easy to discover
 - Consistent naming
@@ -1262,6 +1348,7 @@ Validating references in all skills...
 ### For Skill Authors
 
 **Before creating/updating a skill:**
+
 1. Read Anthropic's skill-creator skill
 2. Review this refactoring plan
 3. Follow the refined template
@@ -1269,6 +1356,7 @@ Validating references in all skills...
 5. Use progressive disclosure
 
 **Checklist for new skills:**
+
 - [ ] YAML frontmatter complete (name, description, license, metadata)
 - [ ] Description includes triggers and keywords
 - [ ] Keywords section added
@@ -1285,16 +1373,19 @@ Validating references in all skills...
 ### Day 1: Setup (2 hours)
 
 1. **Create tools/ directory:**
+
 ```bash
 mkdir -p /Users/rezarezvani/projects/claude-code-skills/tools
 ```
 
-2. **Create helper scripts:**
+1. **Create helper scripts:**
+
 - metadata_generator.py
 - line_counter.py
 - reference_validator.py
 
-3. **Backup current state:**
+1. **Backup current state:**
+
 ```bash
 git tag v1.0.0-pre-refactor
 git branch refactoring/metadata-enhancement
@@ -1304,30 +1395,36 @@ git checkout refactoring/metadata-enhancement
 ### Day 2-3: Metadata Enhancement (12 hours)
 
 **Batch 1 - Marketing & C-Level (5 skills, 2.5 hours):**
+
 - Update all frontmatter
 - Add keywords sections
 - Test activation
 
 **Batch 2 - Product Team (5 skills, 2.5 hours):**
+
 - Update all frontmatter
 - Add keywords sections
 - Test activation
 
 **Batch 3 - Engineering Core (9 skills, 4.5 hours):**
+
 - Update all frontmatter
 - Add allowed-tools where appropriate
 - Add keywords sections
 
 **Batch 4 - Engineering AI/ML (5 skills, 2.5 hours):**
+
 - Update all frontmatter
 - Add keywords sections
 
 **Day 4: RA/QM Skills (12 skills, 6 hours):**
+
 - Update all frontmatter with compliance frameworks
 - Add keywords sections
 - Add allowed-tools for audit skills
 
 **Day 5: Commit Phase 1:**
+
 ```bash
 git add -A
 git commit -m "feat: add professional metadata to all 36 skills"
@@ -1337,21 +1434,25 @@ git push origin refactoring/metadata-enhancement
 ### Week 2: Pilot Optimization
 
 **Monday-Tuesday: content-creator (8 hours):**
+
 - Slim down SKILL.md
 - Create 3 new reference files
 - Test thoroughly
 
 **Wednesday-Thursday: product-manager-toolkit (8 hours):**
+
 - Slim down SKILL.md
 - Create 3 new reference files
 - Test thoroughly
 
 **Friday: senior-fullstack (4 hours):**
+
 - Slim down SKILL.md
 - Organize references
 - Test thoroughly
 
 **Weekend: Review & Commit:**
+
 ```bash
 git add -A
 git commit -m "refactor: optimize 3 pilot skills following Anthropic best practices"
@@ -1362,24 +1463,28 @@ git commit -m "refactor: optimize 3 pilot skills following Anthropic best practi
 ## 🎯 Success Criteria
 
 ### Phase 1 Success
+
 - [ ] All 36 skills have complete metadata
 - [ ] All 36 skills have keywords sections
 - [ ] No broken skills (all still work)
 - [ ] Git committed and pushed
 
 ### Phase 2 Success
+
 - [ ] 3 pilot skills reduced to <200 lines each
 - [ ] New reference files created and linked
 - [ ] All 3 skills activate correctly
 - [ ] No regression in functionality
 
 ### Phase 3 Success
+
 - [ ] All 33 remaining skills optimized
 - [ ] All SKILL.md files <200 lines
 - [ ] No broken links or references
 - [ ] All skills tested and working
 
 ### Phase 4 Success
+
 - [ ] All 36 skills validated
 - [ ] Documentation updated
 - [ ] SKILLS_AUTHORING_GUIDE.md created
@@ -1392,15 +1497,19 @@ git commit -m "refactor: optimize 3 pilot skills following Anthropic best practi
 ### Common Issues & Solutions
 
 **Issue: "I broke the skill after refactoring"**
+
 - Solution: Revert to backup branch, identify what broke, fix incrementally
 
 **Issue: "Reference links don't work"**
+
 - Solution: Use relative paths: `references/file.md`, not absolute paths
 
 **Issue: "Claude doesn't activate the skill anymore"**
+
 - Solution: Check description has clear triggers, verify YAML syntax valid
 
 **Issue: "Keywords too generic"**
+
 - Solution: Use specific terms users would actually say
 
 ---
@@ -1408,18 +1517,23 @@ git commit -m "refactor: optimize 3 pilot skills following Anthropic best practi
 ## 💡 Pro Tips
 
 ### Tip 1: One Skill at a Time
+
 Don't try to refactor all 36 at once. Do 3-5 per day maximum.
 
 ### Tip 2: Test Immediately
+
 After each refactor, test the skill works. Don't batch testing.
 
 ### Tip 3: Keep Backups
+
 Tag before major changes: `git tag v1.0-before-refactor-skill-name`
 
 ### Tip 4: Reference First
+
 When in doubt, move to references/. You can always move back to SKILL.md if needed.
 
 ### Tip 5: User Feedback
+
 Have actual users test refined skills and provide feedback.
 
 ---
@@ -1437,6 +1551,7 @@ After completing this plan, you'll have:
 ✅ **Maintained expertise** (all content retained, better organized)
 
 **Your skills will be:**
+
 - Faster to load
 - Easier to discover
 - Clearer to use
@@ -1445,6 +1560,7 @@ After completing this plan, you'll have:
 - Professionally versioned
 
 **While maintaining:**
+
 - All 97 Python tools
 - All reference materials
 - All frameworks and benchmarks
